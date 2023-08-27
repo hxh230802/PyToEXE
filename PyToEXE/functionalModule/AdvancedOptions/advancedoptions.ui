@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AdvancedOptions</class>
+ <widget class="QDialog" name="AdvancedOptions">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>405</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>高级选项</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>:/Resource/pic/mainwindow/AdvancedOptions_color.svg</normaloff>:/Resource/pic/mainwindow/AdvancedOptions_color.svg</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QScrollArea" name="scrollArea">
+     <property name="styleSheet">
+      <string notr="true">QLineEdit:hover
+{
+border:2px solid rgb(141,141,127);
+}
+QLineEdit:focus
+{
+border:2px solid rgb(26,179,148);
+}
+QScrollArea
+{
+border: 0px;
+}</string>
+     </property>
+     <property name="widgetResizable">
+      <bool>true</bool>
+     </property>
+     <widget class="QWidget" name="scrollAreaWidgetContents">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>393</width>
+        <height>452</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_4">
+       <item>
+        <widget class="QGroupBox" name="Packetizer">
+         <property name="title">
+          <string>打包器</string>
+         </property>
+         <property name="checkable">
+          <bool>false</bool>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QRadioButton" name="pyinstaller_rdo">
+            <property name="text">
+             <string>pyinstaller</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="nuitka_rdo">
+            <property name="text">
+             <string>nuitka</string>
+            </property>
+            <property name="checkable">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="FileDetail">
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="title">
+          <string>文件详细信息</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QCheckBox" name="enableFileDetails_chk">
+            <property name="text">
+             <string>启用文件详细信息</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="productName">
+            <item>
+             <widget class="QLabel" name="productName_lbl">
+              <property name="text">
+               <string>产品名称</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="productName_le"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="productVersion">
+            <item>
+             <widget class="QLabel" name="productVersion_lbl">
+              <property name="text">
+               <string>产品版本</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="CustomLineEdit" name="productVersion_le_1"/>
+            </item>
+            <item>
+             <widget class="QLabel" name="productVersion_lbl_1">
+              <property name="text">
+               <string>.</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="CustomLineEdit" name="productVersion_le_2"/>
+            </item>
+            <item>
+             <widget class="QLabel" name="productVersion_lbl_2">
+              <property name="text">
+               <string>.</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="CustomLineEdit" name="productVersion_le_3"/>
+            </item>
+            <item>
+             <widget class="QLabel" name="productVersion_lbl_3">
+              <property name="text">
+               <string>.</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="CustomLineEdit" name="productVersion_le_4"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="fileVersion">
+            <item>
+             <widget class="QLabel" name="fileVersion_lbl">
+              <property name="text">
+               <string>文件版本</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="CustomLineEdit" name="fileVersion_le_1"/>
+            </item>
+            <item>
+             <widget class="QLabel" name="fileVersion_lbl_1">
+              <property name="text">
+               <string>.</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="CustomLineEdit" name="fileVersion_le_2"/>
+            </item>
+            <item>
+             <widget class="QLabel" name="fileVersion_lbl_2">
+              <property name="text">
+               <string>.</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="CustomLineEdit" name="fileVersion_le_3"/>
+            </item>
+            <item>
+             <widget class="QLabel" name="fileVersion_lbl_3">
+              <property name="text">
+               <string>.</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="CustomLineEdit" name="fileVersion_le_4"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="originalFilename">
+            <item>
+             <widget class="QLabel" name="originalFilename_lbl">
+              <property name="text">
+               <string>原始文件名</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="originalFilename_le"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="internalName">
+            <item>
+             <widget class="QLabel" name="internalName_lbl">
+              <property name="text">
+               <string>内部名称</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="internalName_le"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="fileDescription">
+            <item>
+             <widget class="QLabel" name="fileDescription_lbl">
+              <property name="text">
+               <string>文件描述</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="fileDescription_le"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="companyName">
+            <item>
+             <widget class="QLabel" name="companyName_lbl">
+              <property name="text">
+               <string>公司名称</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="companyName_le"/>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="legalCopyright">
+            <item>
+             <widget class="QLabel" name="legalCopyright_lbl">
+              <property name="text">
+               <string>版权信息</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="legalCopyright_le"/>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="Other">
+         <property name="title">
+          <string>其他</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QCheckBox" name="supportUnicode_chk">
+            <property name="text">
+             <string>支持Unicode字符集</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="encryption">
+            <item>
+             <widget class="QCheckBox" name="encryption_chk">
+              <property name="text">
+               <string>加密</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLineEdit" name="key_le">
+              <property name="toolTip">
+               <string/>
+              </property>
+              <property name="statusTip">
+               <string/>
+              </property>
+              <property name="whatsThis">
+               <string/>
+              </property>
+              <property name="inputMask">
+               <string/>
+              </property>
+              <property name="placeholderText">
+               <string>请输入加密密钥</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="random_Btn">
+              <property name="styleSheet">
+               <string notr="true">QPushButton#random_Btn
+{
+background:rgb(26,179,148); 
+color:rgb(255,255,255); 
+border-radius:5px; 
+min-height:30px; 
+min-width:75px; 
+font:13px &quot;Microsoft YaHei&quot;;
+}
+QPushButton#random_Btn:hover
+{
+background:rgb(24,166,137);
+}
+QPushButton#random_Btn:pressed
+{
+background:rgb(32,75,148);
+}</string>
+              </property>
+              <property name="text">
+               <string>随机生成</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="commandBar">
+     <item>
+      <widget class="QPushButton" name="clear_Btn">
+       <property name="styleSheet">
+        <string notr="true">QPushButton#clear_Btn
+{
+    background: rgb(93, 67, 30);  /* 按钮2的褐色背景 */
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    min-height: 30px;
+    min-width: 75px;
+    font: 15px &quot;Microsoft YaHei&quot;;
+}
+
+QPushButton#clear_Btn:hover
+{
+    background: rgb(73, 53, 24);  /* 鼠标悬停时按钮2的颜色 */
+}
+
+QPushButton#clear_Btn:pressed
+{
+    background: rgb(52, 38, 17);  /* 按钮2按下时的颜色 */
+}</string>
+       </property>
+       <property name="text">
+        <string>清空</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="RestoreDefault_Btn">
+       <property name="styleSheet">
+        <string notr="true">QPushButton#RestoreDefault_Btn {
+    background-color: #95C431;  /* 调暗的黄绿色调 */
+    color: #FFFFFF;
+    border-radius: 5px;
+    min-height: 30px;
+    min-width: 75px;
+    font: 15px &quot;Microsoft YaHei&quot;;
+}
+
+QPushButton#RestoreDefault_Btn:hover {
+    background-color: #82A829;  /* 悬停状态下的颜色 */
+}
+
+QPushButton#RestoreDefault_Btn:pressed {
+    background-color: #6B8A20;  /* 按下状态下的颜色 */
+}</string>
+       </property>
+       <property name="text">
+        <string>恢复默认</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="SaveAsDefault_Btn">
+       <property name="styleSheet">
+        <string notr="true">QPushButton#SaveAsDefault_Btn {
+    background:rgb(155, 39, 175);
+    color:rgb(255, 255, 255);
+    border-radius:5px;
+    min-height:30px;
+    min-width:75px;
+    font:15px &quot;Microsoft YaHei&quot;;
+}
+
+QPushButton#SaveAsDefault_Btn:hover {
+    background:rgb(135, 30, 155);
+}
+
+QPushButton#SaveAsDefault_Btn:pressed {
+    background:rgb(108, 24, 124);
+}</string>
+       </property>
+       <property name="text">
+        <string>存为默认</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancel_Btn">
+       <property name="styleSheet">
+        <string notr="true">QPushButton#cancel_Btn
+{
+    background: rgb(214, 69, 65);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    min-height: 30px;
+    min-width: 75px;
+    font: 15px &quot;Microsoft YaHei&quot;;
+}
+
+QPushButton#cancel_Btn:hover
+{
+    background: rgb(185, 55, 52);
+}
+
+QPushButton#cancel_Btn:pressed
+{
+    background: rgb(124, 38, 36);
+}</string>
+       </property>
+       <property name="text">
+        <string>取消</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="sure_Btn">
+       <property name="styleSheet">
+        <string notr="true">QPushButton#sure_Btn
+{
+background:rgb(26,179,148); 
+color:rgb(255,255,255); 
+border-radius:5px; 
+min-height:30px; 
+min-width:75px; 
+font:15px &quot;Microsoft YaHei&quot;;
+}
+QPushButton#sure_Btn:hover
+{
+background:rgb(24,166,137);
+}
+QPushButton#sure_Btn:pressed
+{
+background:rgb(32,75,148);
+}</string>
+       </property>
+       <property name="text">
+        <string>确认</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>CustomLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header location="global">functionalModule/AdvancedOptions/advancedoptions.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

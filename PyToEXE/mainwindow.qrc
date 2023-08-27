@@ -1,0 +1,16 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Resource/pic/mainwindow/pythonFile.svg</file>
+        <file>Resource/pic/mainwindow/copy.svg</file>
+        <file>Resource/pic/mainwindow/Python.pdf</file>
+        <file>Resource/pic/mainwindow/dir.svg</file>
+        <file>Resource/pic/mainwindow/AdvancedOptions_color.svg</file>
+        <file>Resource/pic/mainwindow/AdvancedOptions_white.svg</file>
+        <file>Resource/pic/mainwindow/About_color.svg</file>
+        <file>Resource/pic/mainwindow/About_white.svg</file>
+        <file>Resource/pic/mainwindow/BUGFIXING.svg</file>
+        <file>Resource/pic/mainwindow/package.svg</file>
+        <file>Resource/pic/mainwindow/update_color.svg</file>
+        <file>Resource/pic/mainwindow/update_white.svg</file>
+    </qresource>
+</RCC>

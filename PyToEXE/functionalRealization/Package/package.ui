@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Package</class>
+ <widget class="QWidget" name="Package">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>打包</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../../mainwindow.qrc">
+    <normaloff>:/Resource/pic/mainwindow/package.svg</normaloff>:/Resource/pic/mainwindow/package.svg</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="CMD_lbl">
+     <property name="text">
+      <string>正在执行命令</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="CMD_le">
+     <property name="acceptDrops">
+      <bool>false</bool>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="Output_lbl">
+     <property name="text">
+      <string>控制台输出</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="OutMsg_te">
+     <property name="acceptDrops">
+      <bool>false</bool>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="exportMsg_Btn">
+       <property name="styleSheet">
+        <string notr="true">QPushButton#exportMsg_Btn
+{
+    background: rgb(150, 111, 51);  /* 按钮1的褐色背景 */
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    min-height: 30px;
+    min-width: 75px;
+    font: 17px &quot;Microsoft YaHei&quot;;
+}
+
+QPushButton#exportMsg_Btn:hover
+{
+    background: rgb(119, 88, 40);  /* 鼠标悬停时按钮1的颜色 */
+}
+
+QPushButton#exportMsg_Btn:pressed
+{
+    background: rgb(78, 58, 26);  /* 按钮1按下时的颜色 */
+}</string>
+       </property>
+       <property name="text">
+        <string>导出信息</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="clearOutput_Btn">
+       <property name="styleSheet">
+        <string notr="true">QPushButton#clearOutput_Btn
+{
+    background: rgb(93, 67, 30);  /* 按钮2的褐色背景 */
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    min-height: 30px;
+    min-width: 75px;
+    font: 17px &quot;Microsoft YaHei&quot;;
+}
+
+QPushButton#clearOutput_Btn:hover
+{
+    background: rgb(73, 53, 24);  /* 鼠标悬停时按钮2的颜色 */
+}
+
+QPushButton#clearOutput_Btn:pressed
+{
+    background: rgb(52, 38, 17);  /* 按钮2按下时的颜色 */
+}</string>
+       </property>
+       <property name="text">
+        <string>清空输出</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancel_Btn">
+       <property name="styleSheet">
+        <string notr="true">QPushButton#cancel_Btn
+{
+    background: rgb(214, 69, 65);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    min-height: 30px;
+    min-width: 75px;
+    font: 17px &quot;Microsoft YaHei&quot;;
+}
+
+QPushButton#cancel_Btn:hover
+{
+    background: rgb(185, 55, 52);
+}
+
+QPushButton#cancel_Btn:pressed
+{
+    background: rgb(124, 38, 36);
+}</string>
+       </property>
+       <property name="text">
+        <string>取消</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="sure_Btn">
+       <property name="styleSheet">
+        <string notr="true">QPushButton#sure_Btn
+{
+background:rgb(26,179,148); 
+color:rgb(255,255,255); 
+border-radius:5px; 
+min-height:30px; 
+min-width:75px; 
+font:17px &quot;Microsoft YaHei&quot;;
+}
+QPushButton#sure_Btn:hover
+{
+background:rgb(24,166,137);
+}
+QPushButton#sure_Btn:pressed
+{
+background:rgb(32,75,148);
+}</string>
+       </property>
+       <property name="text">
+        <string>确认</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../../mainwindow.qrc"/>
+ </resources>
+ <connections/>
+</ui>

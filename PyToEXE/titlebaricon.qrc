@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Resource/pic/titleBarIcon/close_hover.png</file>
+        <file>Resource/pic/titleBarIcon/close_pressed.png</file>
+        <file>Resource/pic/titleBarIcon/colse.png</file>
+        <file>Resource/pic/titleBarIcon/PyToEXE.png</file>
+        <file>Resource/pic/titleBarIcon/settop_off.svg</file>
+        <file>Resource/pic/titleBarIcon/settop_on.svg</file>
+        <file>Resource/pic/titleBarIcon/settop_off.qss</file>
+        <file>Resource/pic/titleBarIcon/settop_on.qss</file>
+        <file>Resource/pic/titleBarIcon/minimize.png</file>
+        <file>Resource/pic/titleBarIcon/setting.svg</file>
+    </qresource>
+</RCC>

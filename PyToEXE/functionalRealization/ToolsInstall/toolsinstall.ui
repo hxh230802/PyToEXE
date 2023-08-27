@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>ToolsInstall</class>
+ <widget class="QWidget" name="ToolsInstall">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>开发工具安装</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_4">
+     <item>
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>工具安装</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="OpenDownloadDir_Btn">
+       <property name="minimumSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#OpenDownloadDir_Btn
+{
+border:one;
+	image: url(:/Resource/pic/mainwindow/dir.svg);
+border-radius:5px; 
+}
+QPushButton#OpenDownloadDir_Btn:hover
+{
+background-color: rgb(234, 235, 239) ;
+}
+QPushButton#OpenDownloadDir_Btn:pressed
+{
+background-color: rgb(180, 180, 180);
+}
+
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="QPushButton" name="Python_Btn">
+       <property name="styleSheet">
+        <string notr="true">QPushButton#Python_Btn
+{
+background:rgb(26,179,148); 
+color:rgb(255,255,255); 
+border-radius:5px; 
+min-height:30px; 
+min-width:75px; 
+font:17px &quot;Microsoft YaHei&quot;;
+}
+QPushButton#Python_Btn:hover
+{
+background:rgb(24,166,137);
+}
+QPushButton#Python_Btn:pressed
+{
+background:rgb(32,75,148);
+}</string>
+       </property>
+       <property name="text">
+        <string>Python 3.8.5</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="Pyinstaller_Btn">
+       <property name="styleSheet">
+        <string notr="true">QPushButton#Pyinstaller_Btn {
+    background-color: #95C431;  /* 调暗的黄绿色调 */
+    color: #FFFFFF;
+    border-radius: 5px;
+    min-height: 30px;
+    min-width: 75px;
+    font: 17px &quot;Microsoft YaHei&quot;;
+}
+
+QPushButton#Pyinstaller_Btn:hover {
+    background-color: #82A829;  /* 悬停状态下的颜色 */
+}
+
+QPushButton#Pyinstaller_Btn:pressed {
+    background-color: #6B8A20;  /* 按下状态下的颜色 */
+}</string>
+       </property>
+       <property name="text">
+        <string>Pyinstaller</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="nuitka_Btn">
+       <property name="styleSheet">
+        <string notr="true">QPushButton#nuitka_Btn {
+    background:rgb(155, 39, 175);
+    color:rgb(255, 255, 255);
+    border-radius:5px;
+    min-height:30px;
+    min-width:75px;
+    font:17px &quot;Microsoft YaHei&quot;;
+}
+
+QPushButton#nuitka_Btn:hover {
+    background:rgb(135, 30, 155);
+}
+
+QPushButton#nuitka_Btn:pressed {
+    background:rgb(108, 24, 124);
+}</string>
+       </property>
+       <property name="text">
+        <string>nuitka</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>安装进度</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QProgressBar" name="install_prb">
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>17</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">/* 设置进度条的样式 */
+QProgressBar#install_prb {
+    background-color: gray; /* 灰色背景 */
+    border-radius: 5px; /* 圆角半径为5px */
+    min-height: 7px; /* 高度为7px */
+    text-align: center; /* 居中对齐 */
+    color: white; /* 文字颜色为白色 */
+}
+
+/* 设置进度条的滑块（已完成部分）样式 */
+QProgressBar#install_prb::chunk {
+    background-color: #87CEEB; /* 天蓝色滑块 */
+    border-radius: 5px; /* 圆角半径为5px */
+}</string>
+       </property>
+       <property name="value">
+        <number>0</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <spacer name="verticalSpacer_3">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_3">
+     <item>
+      <widget class="QPushButton" name="ShowMsg_Btn">
+       <property name="styleSheet">
+        <string notr="true">QPushButton#ShowMsg_Btn {
+    background:rgb(58, 140, 230);
+    color:rgb(255, 255, 255);
+    border-radius:5px;
+    min-height:30px;
+    min-width:75px;
+    font:17px &quot;Microsoft YaHei&quot;;
+}
+
+QPushButton#ShowMsg_Btn:hover {
+    background:rgb(45, 121, 202);
+}
+
+QPushButton#ShowMsg_Btn:pressed {
+    background:rgb(32, 75, 148);
+}</string>
+       </property>
+       <property name="text">
+        <string>显示控制台输出</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancel_Btn">
+       <property name="styleSheet">
+        <string notr="true">QPushButton#cancel_Btn
+{
+    background: rgb(214, 69, 65);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    min-height: 30px;
+    min-width: 75px;
+    font: 17px &quot;Microsoft YaHei&quot;;
+}
+
+QPushButton#cancel_Btn:hover
+{
+    background: rgb(185, 55, 52);
+}
+
+QPushButton#cancel_Btn:pressed
+{
+    background: rgb(124, 38, 36);
+}</string>
+       </property>
+       <property name="text">
+        <string>取消</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="sure_Btn">
+       <property name="styleSheet">
+        <string notr="true">QPushButton#sure_Btn
+{
+background:rgb(26,179,148); 
+color:rgb(255,255,255); 
+border-radius:5px; 
+min-height:30px; 
+min-width:75px; 
+font:17px &quot;Microsoft YaHei&quot;;
+}
+QPushButton#sure_Btn:hover
+{
+background:rgb(24,166,137);
+}
+QPushButton#sure_Btn:pressed
+{
+background:rgb(32,75,148);
+}</string>
+       </property>
+       <property name="text">
+        <string>确认</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

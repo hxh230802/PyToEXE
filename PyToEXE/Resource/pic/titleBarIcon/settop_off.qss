@@ -1,0 +1,14 @@
+QPushButton#settop_Btn
+{
+border:one;
+image: url(:/Resource/pic/titleBarIcon/settop_off.svg);
+border-radius:5px; 
+}
+QPushButton#settop_Btn:hover
+{
+background-color: rgb(234, 235, 239) ;
+}
+QPushButton#settop_Btn:pressed
+{
+background-color: rgb(180, 180, 180);
+}

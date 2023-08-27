@@ -1,0 +1,57 @@
+QWidget
+{
+font: 10pt "黑体";
+background-color: #333;
+color: #FFF;
+}
+QLineEdit
+{
+border:2px solid rgb(229,230,231);
+padding:5px; 
+padding-left:10px; 
+border-radius:3px; 
+/*color:rgb(35,35,35);*/
+font:16px "Microsoft YaHei";
+}
+QTextEdit
+{
+border:2px solid rgb(229,230,231);
+padding:5px; 
+padding-left:10px; 
+border-radius:3px; 
+/*color:rgb(35,35,35);*/
+font:16px "Microsoft YaHei";
+}
+QGroupBox {
+    font-weight: bold;
+    border: 2px solid #CCCCCC;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+QGroupBox:title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 5px;
+    font-family: "Microsoft YaHei", Arial, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+}
+QCheckBox {
+    spacing: 5px; /* 调整复选框与文本之间的间距 */
+}
+
+QCheckBox::indicator {
+    border-radius: 4px; /* 设置小方块圆角半径 */
+    border: 2px solid #888; /* 设置边框样式 */
+    background-color: transparent;
+}
+
+QCheckBox::indicator:hover {
+    border: 2px solid #99CCFF; /* 鼠标悬停时的边框样式 */
+}
+
+QCheckBox::indicator:checked {
+    background-color: #9B27AF; /* 设置选中时的背景颜色 */
+}

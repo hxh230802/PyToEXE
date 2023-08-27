@@ -1,0 +1,825 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PyToEXE</class>
+ <widget class="QWidget" name="PyToEXE">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>560</width>
+    <height>398</height>
+   </rect>
+  </property>
+  <property name="acceptDrops">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string>小猿PTE[Py转EXE]</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget
+{
+font: 10pt &quot;黑体&quot;;
+}
+QLineEdit
+{
+border:2px solid rgb(229,230,231);
+padding:5px; 
+padding-left:10px; 
+border-radius:3px; 
+/*color:rgb(35,35,35);*/
+font:16px &quot;Microsoft YaHei&quot;;
+}
+QTextEdit
+{
+border:2px solid rgb(229,230,231);
+padding:5px; 
+padding-left:10px; 
+border-radius:3px; 
+/*color:rgb(35,35,35);*/
+font:16px &quot;Microsoft YaHei&quot;;
+}
+QGroupBox {
+    font-weight: bold;
+    border: 2px solid #CCCCCC;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+QGroupBox:title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 5px;
+    font-family: &quot;Microsoft YaHei&quot;, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+}
+QCheckBox {
+    spacing: 5px; /* 调整复选框与文本之间的间距 */
+}
+
+QCheckBox::indicator {
+    border-radius: 4px; /* 设置小方块圆角半径 */
+    border: 2px solid #888; /* 设置边框样式 */
+    background-color: transparent;
+}
+
+QCheckBox::indicator:hover {
+    border: 2px solid #99CCFF; /* 鼠标悬停时的边框样式 */
+}
+
+QCheckBox::indicator:checked {
+    background-color: #9B27AF; /* 设置选中时的背景颜色 */
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_2">
+   <item>
+    <layout class="QHBoxLayout" name="titleBar">
+     <item>
+      <widget class="QPushButton" name="titleIcon_Btn">
+       <property name="minimumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#titleIcon_Btn
+{
+border:one;
+image: url(:/Resource/pic/titleBarIcon/PyToEXE.png);
+border-radius:5px; 
+}
+QPushButton#titleIcon_Btn:hover
+{
+background-color: rgb(234, 235, 239) ;
+}
+QPushButton#titleIcon_Btn:pressed
+{
+background-color: rgb(180, 180, 180);
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="titleBar_lbl">
+       <property name="text">
+        <string>小猿PTE[Py转EXE]</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_right">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="DarkTheme_chk">
+       <property name="text">
+        <string>暗色主题</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_left">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="setting_Btn">
+       <property name="minimumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#setting_Btn
+{
+border:one;
+image: url(:/Resource/pic/titleBarIcon/setting.svg);
+border-radius:5px; 
+}
+QPushButton#setting_Btn:hover
+{
+background-color: rgb(234, 235, 239) ;
+}
+QPushButton#setting_Btn:pressed
+{
+background-color: rgb(180, 180, 180);
+}
+
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="minimize_Btn">
+       <property name="minimumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#minimize_Btn
+{
+border:one;
+image: url(:/Resource/pic/titleBarIcon/minimize.png);
+border-radius:5px; 
+}
+QPushButton#minimize_Btn:hover
+{
+background-color: rgb(234, 235, 239) ;
+}
+QPushButton#minimize_Btn:pressed
+{
+background-color: rgb(180, 180, 180);
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="settop_Btn">
+       <property name="minimumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#settop_Btn
+{
+border:one;
+image: url(:/Resource/pic/titleBarIcon/settop_off.svg);
+border-radius:5px; 
+}
+QPushButton#settop_Btn:hover
+{
+background-color: rgb(234, 235, 239) ;
+}
+QPushButton#settop_Btn:pressed
+{
+background-color: rgb(180, 180, 180);
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="close_Btn">
+       <property name="minimumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>30</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#close_Btn
+{
+border:one;
+image: url(:/Resource/pic/titleBarIcon/colse.png);
+}
+QPushButton#close_Btn:hover
+{
+image: url(:/Resource/pic/titleBarIcon/close_hover.png);
+}
+QPushButton#close_Btn:pressed
+{
+image: url(:/Resource/pic/titleBarIcon/close_pressed.png);
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="sourceAndConfig">
+     <item>
+      <widget class="QGroupBox" name="sourceFile_gb">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="title">
+        <string>源文件</string>
+       </property>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QPushButton" name="PythonFile_Btn">
+            <property name="minimumSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>300</width>
+              <height>300</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">QPushButton#PythonFile_Btn
+{
+border:one;
+image: url(:/Resource/pic/mainwindow/pythonFile.svg);
+border-radius:5px; 
+}
+QPushButton#PythonFile_Btn:hover
+{
+background-color: rgb(234, 235, 239) ;
+}
+QPushButton#PythonFile_Btn:pressed
+{
+background-color: rgb(180, 180, 180);
+}
+</string>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="sourceFileName_lbl">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="MyFileSelectionButton" name="sourceFile_Btn">
+          <property name="styleSheet">
+           <string notr="true">QPushButton {
+                   border: 2px dashed gray;
+                  border-radius: 10px;
+                   font: 13pt '微软雅黑';
+                 text-align: left;
+                    padding-right: 10px;
+                }
+                QPushButton:hover {
+                    border: 2px dashed black;
+               }</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="config_gb">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="title">
+        <string>自定义配置</string>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_icon">
+          <item>
+           <widget class="QCheckBox" name="configIcon_chk">
+            <property name="text">
+             <string>自定义图标</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="configIconName_lbl">
+            <property name="text">
+             <string/>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="configIcon_Btn">
+            <property name="styleSheet">
+             <string notr="true">QPushButton#configIcon_Btn
+{
+background:rgb(255,115,0); 
+color:rgb(255,255,255); 
+border-radius:5px; 
+min-height:30px; 
+min-width:75px; 
+font:17px &quot;Microsoft YaHei&quot;;
+}
+QPushButton#configIcon_Btn:hover
+{
+background:rgb(201,93,4);
+}
+QPushButton#configIcon_Btn:pressed
+{
+background:rgb(255,0,91);
+}
+
+QPushButton#configIcon_Btn:disabled
+{
+background:rgb(80,80,80);
+}</string>
+            </property>
+            <property name="text">
+             <string>选择</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="DisplayCMD_chk">
+          <property name="text">
+           <string>显示CMD窗口</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="AdvancedOptions_Btn">
+          <property name="styleSheet">
+           <string notr="true">QPushButton#AdvancedOptions_Btn {
+    background:rgb(155, 39, 175);
+    color:rgb(255, 255, 255);
+    border-radius:5px;
+    min-height:30px;
+    min-width:75px;
+    font:17px &quot;Microsoft YaHei&quot;;
+}
+
+QPushButton#AdvancedOptions_Btn:hover {
+    background:rgb(135, 30, 155);
+}
+
+QPushButton#AdvancedOptions_Btn:pressed {
+    background:rgb(108, 24, 124);
+}</string>
+          </property>
+          <property name="text">
+           <string>高级选项</string>
+          </property>
+          <property name="icon">
+           <iconset resource="../mainwindow.qrc">
+            <normaloff>:/Resource/pic/mainwindow/AdvancedOptions_white.svg</normaloff>:/Resource/pic/mainwindow/AdvancedOptions_white.svg</iconset>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="output_gb">
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="title">
+      <string>输出配置</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout_6">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QLabel" name="OutPutTypeTitle_lbl">
+          <property name="text">
+           <string>输出形式</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="OutPutType_cmb">
+          <property name="styleSheet">
+           <string notr="true"/>
+          </property>
+          <item>
+           <property name="text">
+            <string>单文件</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>文件夹</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QLabel" name="OutPutName_lbl">
+            <property name="text">
+             <string>文件名</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="OutPutName_le">
+            <property name="styleSheet">
+             <string notr="true">QLineEdit#OutPutName_le:hover
+{
+border:2px solid rgb(141,141,127);
+}
+QLineEdit#OutPutName_le:focus
+{
+border:2px solid rgb(26,179,148);
+}
+</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="OutPutExtension_le">
+            <property name="text">
+             <string>.exe</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="horizontalSpacer">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>40</width>
+          <height>20</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QLabel" name="OutPutPathTitle_lbl">
+          <property name="text">
+           <string>输出目录</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QComboBox" name="OutPutPath_cmb">
+            <item>
+             <property name="text">
+              <string>源文件目录</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>桌面</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>程序目录</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>自定义目录</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="OutPutPath_Btn">
+            <property name="styleSheet">
+             <string notr="true">QPushButton#OutPutPath_Btn
+{
+background:rgb(255,115,0); 
+color:rgb(255,255,255); 
+border-radius:5px; 
+min-height:30px; 
+min-width:75px; 
+font:17px &quot;Microsoft YaHei&quot;;
+}
+QPushButton#OutPutPath_Btn:hover
+{
+background:rgb(201,93,4);
+}
+QPushButton#OutPutPath_Btn:pressed
+{
+background:rgb(255,0,91);
+}
+QPushButton#OutPutPath_Btn:disabled
+{
+background:rgb(80,80,80);
+}
+ </string>
+            </property>
+            <property name="text">
+             <string>选择</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="OutPutPath_le"/>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="command">
+     <item>
+      <widget class="QLabel" name="CMD_lbl">
+       <property name="text">
+        <string>CMD命令</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLineEdit" name="CMD_le">
+       <property name="styleSheet">
+        <string notr="true">QLineEdit#OutPutName_lineEdit:hover
+{
+border:2px solid rgb(141,141,127);
+}
+QLineEdit#OutPutName_lineEdit:focus
+{
+border:2px solid rgb(26,179,148);
+}
+</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="CopyCmd_Btn">
+       <property name="minimumSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>40</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">QPushButton#CopyCmd_Btn
+{
+border:one;
+	image: url(:/Resource/pic/mainwindow/copy.svg);
+border-radius:5px; 
+}
+QPushButton#CopyCmd_Btn:hover
+{
+background-color: rgb(234, 235, 239) ;
+}
+QPushButton#CopyCmd_Btn:pressed
+{
+background-color: rgb(180, 180, 180);
+}
+
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="bottomBtn">
+     <item>
+      <widget class="QPushButton" name="start_Btn">
+       <property name="styleSheet">
+        <string notr="true">QPushButton#start_Btn
+{
+background:rgb(26,179,148); 
+color:rgb(255,255,255); 
+border-radius:5px; 
+min-height:30px; 
+min-width:75px; 
+font:17px &quot;Microsoft YaHei&quot;;
+}
+QPushButton#start_Btn:hover
+{
+background:rgb(24,166,137);
+}
+QPushButton#start_Btn:pressed
+{
+background:rgb(32,75,148);
+}</string>
+       </property>
+       <property name="text">
+        <string>开始输出</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="UsingTutorials_Btn">
+       <property name="styleSheet">
+        <string notr="true">QPushButton#UsingTutorials_Btn {
+    background-color: #95C431;  /* 调暗的黄绿色调 */
+    color: #FFFFFF;
+    border-radius: 5px;
+    min-height: 30px;
+    min-width: 75px;
+    font: 17px &quot;Microsoft YaHei&quot;;
+}
+
+QPushButton#UsingTutorials_Btn:hover {
+    background-color: #82A829;  /* 悬停状态下的颜色 */
+}
+
+QPushButton#UsingTutorials_Btn:pressed {
+    background-color: #6B8A20;  /* 按下状态下的颜色 */
+}</string>
+       </property>
+       <property name="text">
+        <string>使用教程</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="InstallTolls_Btn">
+       <property name="styleSheet">
+        <string notr="true">QPushButton#InstallTolls_Btn {
+    background:rgb(155, 39, 175);
+    color:rgb(255, 255, 255);
+    border-radius:5px;
+    min-height:30px;
+    min-width:75px;
+    font:17px &quot;Microsoft YaHei&quot;;
+}
+
+QPushButton#InstallTolls_Btn:hover {
+    background:rgb(135, 30, 155);
+}
+
+QPushButton#InstallTolls_Btn:pressed {
+    background:rgb(108, 24, 124);
+}</string>
+       </property>
+       <property name="text">
+        <string>开发工具</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="About_Btn">
+       <property name="styleSheet">
+        <string notr="true">QPushButton#About_Btn {
+    background:rgb(58, 140, 230);
+    color:rgb(255, 255, 255);
+    border-radius:5px;
+    min-height:30px;
+    min-width:75px;
+    font:17px &quot;Microsoft YaHei&quot;;
+}
+
+QPushButton#About_Btn:hover {
+    background:rgb(45, 121, 202);
+}
+
+QPushButton#About_Btn:pressed {
+    background:rgb(32, 75, 148);
+}</string>
+       </property>
+       <property name="text">
+        <string>关于软件</string>
+       </property>
+       <property name="icon">
+        <iconset resource="../mainwindow.qrc">
+         <normaloff>:/Resource/pic/mainwindow/About_white.svg</normaloff>:/Resource/pic/mainwindow/About_white.svg</iconset>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>MyFileSelectionButton</class>
+   <extends>QPushButton</extends>
+   <header location="global">Libs/MyFileSelectionButton/myfileselectionbutton.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../mainwindow.qrc"/>
+ </resources>
+ <connections/>
+</ui>

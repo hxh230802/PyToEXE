@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BugReport</class>
+ <widget class="QDialog" name="BugReport">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>评价/BUG反馈</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../../mainwindow.qrc">
+    <normaloff>:/Resource/pic/mainwindow/BUGFIXING.svg</normaloff>:/Resource/pic/mainwindow/BUGFIXING.svg</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTextEdit" name="BugReport_te">
+     <property name="styleSheet">
+      <string notr="true">QTextEdit
+{
+border:2px solid rgb(229,230,231);
+padding:5px; 
+padding-left:10px; 
+border-radius:3px; 
+/*color:rgb(35,35,35);*/
+font:16px &quot;Microsoft YaHei&quot;;
+}
+QTextEdit:hover
+{
+border:2px solid rgb(141,141,127);
+}
+QTextEdit:focus
+{
+border:2px solid rgb(26,179,148);
+}</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="submit_Btn">
+     <property name="styleSheet">
+      <string notr="true">QPushButton#submit_Btn
+{
+background:rgb(255,115,0); 
+color:rgb(255,255,255); 
+border-radius:5px; 
+min-height:30px; 
+min-width:75px; 
+font:17px &quot;Microsoft YaHei&quot;;
+}
+QPushButton#submit_Btn:hover
+{
+background:rgb(201,93,4);
+}
+QPushButton#submit_Btn:pressed
+{
+background:rgb(255,0,91);
+}
+QPushButton#OutPutPath_Btn:disabled
+{
+background:rgb(80,80,80);
+}
+ </string>
+     </property>
+     <property name="text">
+      <string>发送</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../../mainwindow.qrc"/>
+ </resources>
+ <connections/>
+</ui>

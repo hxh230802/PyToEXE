@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Setting</class>
+ <widget class="QWidget" name="Setting">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>设置</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../../titlebaricon.qrc">
+    <normaloff>:/Resource/pic/titleBarIcon/setting.svg</normaloff>:/Resource/pic/titleBarIcon/setting.svg</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <layout class="QVBoxLayout" name="left">
+       <item>
+        <widget class="QGroupBox" name="Theme">
+         <property name="title">
+          <string>主题</string>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QRadioButton" name="lightTheme_rdo">
+            <property name="text">
+             <string>亮色</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="darkTheme_rdo">
+            <property name="text">
+             <string>暗色</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QRadioButton" name="SystemTheme_rdo">
+            <property name="text">
+             <string>跟随系统</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="Advanced">
+         <property name="title">
+          <string>高级</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QCheckBox" name="openOutputDir_chk">
+            <property name="text">
+             <string>转换完成后自动打开输出目录</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="keepSpecFile_chk">
+            <property name="text">
+             <string>生成后保留spec文件</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="keepBuildDirectory_chk">
+            <property name="text">
+             <string>生成后保留构建目录</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </item>
+     <item>
+      <layout class="QVBoxLayout" name="right">
+       <item>
+        <layout class="QHBoxLayout" name="title">
+         <item>
+          <widget class="QLabel" name="Logo_lbl">
+           <property name="minimumSize">
+            <size>
+             <width>70</width>
+             <height>70</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">image: url(:/Resource/pic/titleBarIcon/PyToEXE.png);</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="title_lbl">
+           <property name="text">
+            <string>小猿
+PTE</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="version">
+         <item>
+          <widget class="QLabel" name="version_l_lbl">
+           <property name="text">
+            <string>版本</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="version_lbl">
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="update">
+         <item>
+          <widget class="QPushButton" name="checkUpdate_Btn">
+           <property name="styleSheet">
+            <string notr="true">QPushButton#checkUpdate_Btn
+{
+background:rgb(255,115,0); 
+color:rgb(255,255,255); 
+border-radius:5px; 
+min-height:30px; 
+min-width:75px; 
+font:17px &quot;Microsoft YaHei&quot;;
+}
+QPushButton#checkUpdate_Btn:hover
+{
+background:rgb(201,93,4);
+}
+QPushButton#checkUpdate_Btn:pressed
+{
+background:rgb(255,0,91);
+}
+QPushButton#OutPutPath_Btn:disabled
+{
+background:rgb(80,80,80);
+}
+ </string>
+           </property>
+           <property name="text">
+            <string>检查更新</string>
+           </property>
+           <property name="icon">
+            <iconset resource="../../mainwindow.qrc">
+             <normaloff>:/Resource/pic/mainwindow/update_white.svg</normaloff>:/Resource/pic/mainwindow/update_white.svg</iconset>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="networkState_lbl">
+           <property name="minimumSize">
+            <size>
+             <width>30</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="autoCheckUpdates_chk">
+         <property name="text">
+          <string>启动时自动检查更新</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="authorMsg_Btn">
+         <property name="styleSheet">
+          <string notr="true">QPushButton#authorMsg_Btn {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 rgb(153, 0, 0), stop:0.2 rgb(165, 102, 0), stop:0.4 rgb(153, 153, 0), stop:0.6 rgb(0, 102, 0), stop:0.8 rgb(0, 0, 102), stop:1 rgb(51, 0, 73));
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    min-height: 30px;
+    min-width: 75px;
+    font: 17px &quot;Microsoft YaHei&quot;;
+}
+
+QPushButton#authorMsg_Btn:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 rgb(128, 0, 0), stop:0.2 rgb(138, 85, 0), stop:0.4 rgb(128, 128, 0), stop:0.6 rgb(0, 85, 0), stop:0.8 rgb(0, 0, 85), stop:1 rgb(41, 0, 59));
+}
+
+QPushButton#authorMsg_Btn:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 rgb(102, 0, 0), stop:0.2 rgb(110, 68, 0), stop:0.4 rgb(102, 102, 0), stop:0.6 rgb(0, 68, 0), stop:0.8 rgb(0, 0, 68), stop:1 rgb(31, 0, 45));
+}</string>
+         </property>
+         <property name="text">
+          <string>关于创猿</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="commandBar">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancel_Btn">
+       <property name="styleSheet">
+        <string notr="true">QPushButton#cancel_Btn
+{
+    background: rgb(214, 69, 65);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    min-height: 30px;
+    min-width: 75px;
+    font: 17px &quot;Microsoft YaHei&quot;;
+}
+
+QPushButton#cancel_Btn:hover
+{
+    background: rgb(185, 55, 52);
+}
+
+QPushButton#cancel_Btn:pressed
+{
+    background: rgb(124, 38, 36);
+}</string>
+       </property>
+       <property name="text">
+        <string>取消</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="sure_Btn">
+       <property name="styleSheet">
+        <string notr="true">QPushButton#sure_Btn
+{
+background:rgb(26,179,148); 
+color:rgb(255,255,255); 
+border-radius:5px; 
+min-height:30px; 
+min-width:75px; 
+font:17px &quot;Microsoft YaHei&quot;;
+}
+QPushButton#sure_Btn:hover
+{
+background:rgb(24,166,137);
+}
+QPushButton#sure_Btn:pressed
+{
+background:rgb(32,75,148);
+}</string>
+       </property>
+       <property name="text">
+        <string>确认</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../../titlebaricon.qrc"/>
+  <include location="../../mainwindow.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>About</class>
+ <widget class="QDialog" name="About">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>关于</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../../mainwindow.qrc">
+    <normaloff>:/Resource/pic/mainwindow/About_color.svg</normaloff>:/Resource/pic/mainwindow/About_color.svg</iconset>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <spacer name="horizontalSpacer_4">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QLabel" name="title_lbl">
+       <property name="styleSheet">
+        <string notr="true">font: 75 22pt &quot;等线&quot;;</string>
+       </property>
+       <property name="text">
+        <string>小猿PTE[Py转EXE]</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="horizontalSpacer_5">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="Logo_lbl">
+     <property name="minimumSize">
+      <size>
+       <width>200</width>
+       <height>200</height>
+      </size>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">image: url(:/Resource/pic/titleBarIcon/PyToEXE.png);</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="version_lbl">
+     <property name="text">
+      <string>当前版本：</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QPushButton" name="BugReport_Btn">
+       <property name="styleSheet">
+        <string notr="true">QPushButton#BugReport_Btn
+{
+background:rgb(255,115,0); 
+color:rgb(255,255,255); 
+border-radius:5px; 
+min-height:30px; 
+min-width:75px; 
+font:17px &quot;Microsoft YaHei&quot;;
+}
+QPushButton#BugReport_Btn:hover
+{
+background:rgb(201,93,4);
+}
+QPushButton#BugReport_Btn:pressed
+{
+background:rgb(255,0,91);
+}
+QPushButton#OutPutPath_Btn:disabled
+{
+background:rgb(80,80,80);
+}
+ </string>
+       </property>
+       <property name="text">
+        <string>评价/BUG反馈</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="authorMsg_Btn">
+       <property name="styleSheet">
+        <string notr="true">QPushButton#authorMsg_Btn {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 rgb(153, 0, 0), stop:0.2 rgb(165, 102, 0), stop:0.4 rgb(153, 153, 0), stop:0.6 rgb(0, 102, 0), stop:0.8 rgb(0, 0, 102), stop:1 rgb(51, 0, 73));
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    min-height: 30px;
+    min-width: 75px;
+    font: 17px &quot;Microsoft YaHei&quot;;
+}
+
+QPushButton#authorMsg_Btn:hover {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 rgb(128, 0, 0), stop:0.2 rgb(138, 85, 0), stop:0.4 rgb(128, 128, 0), stop:0.6 rgb(0, 85, 0), stop:0.8 rgb(0, 0, 85), stop:1 rgb(41, 0, 59));
+}
+
+QPushButton#authorMsg_Btn:pressed {
+    background: qlineargradient(x1:0, y1:0, x2:1, y2:0, stop:0 rgb(102, 0, 0), stop:0.2 rgb(110, 68, 0), stop:0.4 rgb(102, 102, 0), stop:0.6 rgb(0, 68, 0), stop:0.8 rgb(0, 0, 68), stop:1 rgb(31, 0, 45));
+}</string>
+       </property>
+       <property name="text">
+        <string>作者信息：创猿</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="updateLog_lbl">
+     <property name="text">
+      <string>更新日志</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="updateLog_te">
+     <property name="styleSheet">
+      <string notr="true">QTextEdit
+{
+border:2px solid rgb(229,230,231);
+padding:5px; 
+padding-left:10px; 
+border-radius:3px; 
+/*color:rgb(35,35,35);*/
+font:16px &quot;Microsoft YaHei&quot;;
+}</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="../../mainwindow.qrc"/>
+ </resources>
+ <connections/>
+</ui>
